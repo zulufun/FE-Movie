@@ -1,0 +1,29 @@
+.navbar-mobile{
+    margin-top: 15%;
+    .navbar-moblie-title{
+        color:white;
+        font-size: 1.7rem;
+        font-weight: 700;
+        padding: 2rem 2rem 2rem 4%;
+        border-top:1px solid rgba(255, 255, 255, 0.164);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.164);
+
+    }
+    .navbar-group{
+        padding: 2rem 2rem 2rem 4%;
+        border-top:1px solid rgba(255, 255, 255, 0.164);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.164);
+        .navbar-moblie-title-group{
+            color: white;
+            font-size: 1.7rem;
+            font-weight: 700;
+            padding-bottom: 1.5rem;
+
+        }
+        .item-navbar-mobile-group{
+            text-decoration: none;
+            font-size: 1.2rem;
+            // color: ;
+        }
+    }
+}

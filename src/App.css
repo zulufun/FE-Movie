@@ -1,0 +1,30 @@
+.ContentPage{
+   border-bottom: 1px solid rgba(255, 255, 255, 0.397);
+    
+}
+.MainContent{
+    width: 70%;
+    
+} 
+.MainApp {
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    height: 100%;
+
+}
+ 
+@media only screen and (max-width : 1024px) {
+    .MainContent{
+        width: 100%;
+    }
+}
+
+
+@media only screen and (min-width : 1024px) and (max-width:1250px) {
+    .MainContent{
+        width: 90%;
+    }
+}

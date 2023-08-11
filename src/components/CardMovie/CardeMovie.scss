@@ -1,0 +1,62 @@
+.card-movie{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+   
+    .image-card-movie{
+        position: relative;
+        transition: transform 0.3s ease; 
+        transform-origin: center;
+        &:hover{
+            transform:scale(1.1) ; 
+            opacity: 0.5; 
+            .icon-image-play{
+                display: block;
+            }
+        }
+        .icon-image-play{
+            position: absolute;
+            font-size: 2rem;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%,-50%);
+           display: none;
+        }
+     
+       
+    }
+   
+    .info-movie-card{
+        .row-1{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .year{
+                color: #FE592A;
+            }
+        }
+        .row-2{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .quality-movie{
+                font-size: 0.7rem;
+                
+            }
+            .other-info-movie{
+                display: flex;
+                .run-time-card-movie{
+                    font-size: 0.5rem;
+                    padding-right: 0.3rem;
+                }
+                .rate-card-movie{
+                    font-size: 0.5rem;
+                }
+            }
+        }
+    }
+    
+}

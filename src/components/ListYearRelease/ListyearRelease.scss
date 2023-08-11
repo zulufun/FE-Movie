@@ -1,0 +1,30 @@
+.list-year-release{
+    .title-list-year-release{
+        
+        padding-bottom: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .title{
+            font-size: 1.1rem;
+        }
+       
+    }
+    .list-year{
+        width: 100%;
+        .item-year{
+            color: white;
+            padding-top: 0.3rem;
+            padding-bottom: 0.3rem;
+            font-size: 0.9rem;
+            text-align: center;
+            // padding: ;
+            background-color: #454545;
+            cursor: pointer;
+            &:hover{
+                background-color: #454545c4;
+            }
+        }
+    }
+}

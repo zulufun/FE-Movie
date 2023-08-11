@@ -1,0 +1,18 @@
+.list-movie-home{
+//    padding-left: 1rem;
+    margin-top: 3rem;
+    width: 100%;
+    cursor: pointer;
+    .title-list{
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+    .content-list{
+    
+         margin-top: 1.3rem;
+        .list-movie-page{
+             display: flex;
+        }
+    }
+}
+
