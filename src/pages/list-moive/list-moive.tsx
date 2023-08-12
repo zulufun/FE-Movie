@@ -10,7 +10,6 @@ for (let i = 0; i < 12; i++) {
   data.push(i);
 }
 const ListMoive: React.FC<any> = () => {
-  const [current, setCurrent] = useState<any>(3);
   return (
     <div className="list-page-wrapper">
       <div className="list-page-content">
