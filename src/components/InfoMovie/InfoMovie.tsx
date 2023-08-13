@@ -2,8 +2,14 @@ import React from "react";
 import { Button } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 import "./InfoMovie.scss";
+import { RouterLinks } from "../../const/RouterLinks";
 const InfoMovie: React.FC<any> = () => {
+  const navigate = useNavigate();
+  const handleClickWatchMovie = () => {
+    navigate(RouterLinks.WATCH_MOVIE);
+  };
   return (
     <div className="info-movie">
       <span className="series_movie">Phim bộ</span>
@@ -11,7 +17,7 @@ const InfoMovie: React.FC<any> = () => {
       <div>
         <span className="info_detail_movie">9 tập - 2019 - Pháp thuật - Viễn tưởng</span>
       </div>
-      <button className="button_watching">
+      <button onClick={handleClickWatchMovie} className="button_watching">
         <FontAwesomeIcon className="icon_play" icon={faPlay} />
         Xem phim
       </button>

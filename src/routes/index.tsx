@@ -5,6 +5,7 @@ import ListMoive from "../pages/list-moive/list-moive";
 import MovieDetail from "../pages/movie-detail/moive-detail";
 import Layouts from "../layouts/Layouts";
 import NotFound from "../pages/not-found/NotFound";
+import WatchMovie from "../pages/watch-movie/watch-movie";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
       {
         path: RouterLinks.DETAIL_MOVIE,
         element: <MovieDetail />,
+      },
+      {
+        path: RouterLinks.WATCH_MOVIE,
+        element: <WatchMovie />,
       },
     ],
   },

@@ -1,12 +1,21 @@
 import React from "react";
-import { Card, Image } from "antd";
+
 import image from "../../assets/110715CineHarry746.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faStar, faPlay } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 import "./CardeMovie.scss";
-const CardMovie: React.FC = () => {
+import { RouterLinks } from "../../const/RouterLinks";
+const CardMovie: React.FC<any> = ({ click }) => {
+  const navigate = useNavigate();
+  const handleClickCardMovie = () => {
+    navigate(RouterLinks.DETAIL_MOVIE);
+    if (window.location.href.includes("/detail-moive")) {
+      click();
+    }
+  };
   return (
-    <div className="card-movie">
+    <div onClick={handleClickCardMovie} className="card-movie">
       <div className="image-card-movie">
         <FontAwesomeIcon className="icon-image-play" icon={faPlay} />
         <img
