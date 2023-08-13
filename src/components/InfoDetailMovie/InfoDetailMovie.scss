@@ -50,9 +50,9 @@
            }
            .category{
             margin-top: 1.5rem;
-            span{
-                padding: 1.5rem;
-            }
+            // span{
+            //     padding: 1.5rem;
+            // }
            }
         }
     }
@@ -125,6 +125,28 @@
         }
       
         
+    }
+    .episodes{
+        margin-top:1.5rem;
+        .title{
+            font-size: 1.3rem;
+            font-weight: 700;
+            padding-bottom: 1rem;
+        }
+        .list-episodess{ 
+            padding: 1rem;
+            
+            .item-episodes{
+              position: relative;
+               margin-left: 0.5rem;
+               margin-right: 0.5rem;
+               .episode-count{
+                position: absolute;
+                bottom: 0;
+               }
+               
+            }
+        }
     }
 }
 .ant-rate-star-zero{

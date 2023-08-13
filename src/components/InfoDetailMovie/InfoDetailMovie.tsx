@@ -1,14 +1,14 @@
 import React from "react";
-import { Image, Rate, Typography, Avatar } from "antd";
+import { Image, Rate, Typography, Avatar, Row, Col } from "antd";
 import image from "../../assets/110715CineHarry746.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import avatar from "../../assets/21204723-hinh-anh-gai-xinh-2.jpg";
-// import { Carousel } from "react-responsive-carousel";
-// import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./InfoDetailMovie.scss";
+import ReactPlayer from "react-player";
+
 const actors: any = [];
 for (let i = 0; i <= 10; i++) {
   actors.push(i);
@@ -54,10 +54,26 @@ const InfoDetailMovie: React.FC<any> = () => {
             <div className="rate-of-me">Đánh giá của bạn : 9</div>
           </div>
           <div className="category">
-            <span>Phim chiếu rạp</span>
-            <span>Phim chiếu rạp</span>
-            <span>Phim chiếu rạp</span>
-            <span>Phim chiếu rạp</span>
+            <Row gutter={[0, 10]}>
+              <Col md={4} xs={8}>
+                <span>Phim chiếu rạp</span>
+              </Col>
+              <Col md={4} xs={8}>
+                <span>Phim chiếu rạp</span>
+              </Col>
+              <Col md={4} xs={8}>
+                <span>Phim chiếu rạp</span>
+              </Col>
+              <Col md={4} xs={8}>
+                <span>Phim chiếu rạp</span>
+              </Col>
+              <Col md={4} xs={8}>
+                <span>Phim chiếu rạp</span>
+              </Col>
+              <Col md={4} xs={8}>
+                <span>Phim chiếu rạp</span>
+              </Col>
+            </Row>
           </div>
         </div>
       </div>
@@ -106,6 +122,21 @@ const InfoDetailMovie: React.FC<any> = () => {
                     <div className="name-actor">Hoang Nam</div>
                     <div className="age-actor">Age: 20</div>
                   </div>
+                </div>
+              );
+            })}
+          </Carousel>
+        </div>
+      </div>
+      <div className="episodes">
+        <div className="title">Tập phim</div>
+        <div className="list-episodess">
+          <Carousel swipeable={false} draggable={false} ssr={true} infinite={true} responsive={responsive}>
+            {actors.map((item: any) => {
+              return (
+                <div key={item} className="item-episodes">
+                  <ReactPlayer url={image} width={"100%"} height={"100%"} controls={true} />
+                  <div className="episode-count">Tập 2</div>
                 </div>
               );
             })}

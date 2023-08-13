@@ -10,15 +10,17 @@ import ListMoive from "./pages/list-moive/list-moive";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import NavbarInMobile from "./components/NavbarInMobile/NavbarInMobile";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes/index";
 
 import "./App.css";
 function App() {
   const [isOpenSideBarRight, setIsOpenSidebarRight] = useState<any>(false);
   return (
     <Provider store={store}>
-      <BrowserRouter>
-        <PersistGate loading={null} persistor={persistor}>
-          <div className="MainApp">
+      {/* <BrowserRouter> */}
+      <PersistGate loading={null} persistor={persistor}>
+        {/* <div className="MainApp">
             <div className="MainContent">
               <Header IsOpenSidebarRight={isOpenSideBarRight} setIsOpenSidebarRight={setIsOpenSidebarRight} />
               {isOpenSideBarRight ? <NavbarInMobile isOpen={isOpenSideBarRight} /> : ""}
@@ -31,9 +33,10 @@ function App() {
               </div>
               <Footer />
             </div>
-          </div>
-        </PersistGate>
-      </BrowserRouter>
+          </div> */}
+        <RouterProvider router={router} />
+      </PersistGate>
+      {/* </BrowserRouter> */}
     </Provider>
   );
 }

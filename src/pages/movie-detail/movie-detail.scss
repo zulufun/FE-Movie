@@ -4,9 +4,9 @@
     display: flex;
     flex-direction: column;
     color: white;
-    margin-top: 5%;
+    margin-top: 10%;
    
-    .movie-detail-page-content{
+    .movie-detail-content{
       
        .list-movie{
         display: flex;
@@ -16,6 +16,7 @@
         margin-top: 3rem;
         margin-left: 2%;
         margin-right: 2%;
+        margin-bottom: 3rem;
 
        }
     }
