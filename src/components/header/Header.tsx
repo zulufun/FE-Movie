@@ -59,7 +59,7 @@ const Header: React.FC<any> = ({ IsOpenSidebarRight, setIsOpenSidebarRight }) =>
         </li>
         <li className="nav_item">
           <Link className="style_link" to={`${RouterLinks.LIST_MOVIE}?isSeries=1`}>
-            <span> Phim lẻ</span>
+            <span> Phim bộ</span>
           </Link>
         </li>
         <li className="nav_item">
