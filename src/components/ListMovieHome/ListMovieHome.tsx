@@ -11,16 +11,16 @@ const ListMovieHome: React.FC = () => {
       <div className="content-list">
         <Carousel showThumbs={false} showArrows={true} swipeScrollTolerance={4}>
           <div className="list-movie-page">
-            <CardMovie />
-            <CardMovie />
-            <CardMovie />
-            <CardMovie />
+            <CardMovie click={() => console.log("click")} />
+            <CardMovie click={() => console.log("click")} />
+            <CardMovie click={() => console.log("click")} />
+            <CardMovie click={() => console.log("click")} />
           </div>
           <div className="list-movie-page">
-            <CardMovie />
-            <CardMovie />
-            <CardMovie />
-            <CardMovie />
+            <CardMovie click={() => console.log("click")} />
+            <CardMovie click={() => console.log("click")} />
+            <CardMovie click={() => console.log("click")} />
+            <CardMovie click={() => console.log("click")} />
           </div>
         </Carousel>
       </div>

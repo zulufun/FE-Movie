@@ -25,7 +25,7 @@ const WatchMovie: React.FC<any> = () => {
               {data.map((item: any) => {
                 return (
                   <Col key={item} lg={4} xs={6}>
-                    <CardMovie />
+                    <CardMovie click={() => console.log("click")} />
                   </Col>
                 );
               })}

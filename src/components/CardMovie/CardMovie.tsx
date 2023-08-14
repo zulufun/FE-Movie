@@ -10,6 +10,7 @@ const CardMovie: React.FC<any> = ({ click }) => {
   const navigate = useNavigate();
   const handleClickCardMovie = () => {
     navigate(RouterLinks.DETAIL_MOVIE);
+    console.log("check", window.location.href.includes("/detail-movie"));
     if (window.location.href.includes("/detail-moive")) {
       click();
     }

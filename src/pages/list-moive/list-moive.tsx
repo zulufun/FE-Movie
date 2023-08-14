@@ -32,7 +32,7 @@ const ListMoive: React.FC<any> = () => {
                   {data.map((item: any) => {
                     return (
                       <Col key={item} span={6}>
-                        <CardMovie />
+                        <CardMovie click={() => console.log("click")} />
                       </Col>
                     );
                   })}
