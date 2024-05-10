@@ -5,10 +5,12 @@ import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import "./InfoMovie.scss";
 import { RouterLinks } from "../../const/RouterLinks";
+import { useParams } from 'react-router-dom';
 const InfoMovie: React.FC<any> = () => {
   const navigate = useNavigate();
+  const {id} = useParams();
   const handleClickWatchMovie = () => {
-    navigate(RouterLinks.WATCH_MOVIE);
+    navigate(`/watch-movie/${id}`);
   };
   return (
     <div className="info-movie">

@@ -39,14 +39,11 @@ const HomePage: React.FC<any> = () => {
             <div className="movie-header">
               <Carousel dotPosition="bottom" dots={true} autoplay>
                 <CardMovieHeader />
-                <CardMovieHeader />
-                <CardMovieHeader />
+                
               </Carousel>
             </div>
           </Col>
           <Col span={24} md={16}>
-            <ListMovieHome />
-            <ListMovieHome />
             <ListMovieHome />
           </Col>
           <Col span={24} md={8}>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faTwitter, faSquareFacebook, faYoutube, faTelegram } from "@fortawesome/free-brands-svg-icons";
@@ -10,7 +11,7 @@ const Footer: React.FC = () => {
       <div className="content-footer">
         <div className="descrip-web-movie">
           <div>Movies</div>
-          <p>TreanT phim-nền tảng xem phim thân thiện với người dùng .Nguồn phim phong phú và đa dạng</p>
+          <p>phim-nền tảng xem phim thân thiện với người dùng .Nguồn phim phong phú và đa dạng</p>
         </div>
         <div className="movie-featured">
           <div className="title">Phim nổi bật</div>
@@ -31,12 +32,17 @@ const Footer: React.FC = () => {
           <div className="title">Thông tin liên hệ</div>
           <div className="contact-email">
             <FontAwesomeIcon icon={faEnvelope} />
-            <span>hntreant@gmail.com</span>
+            <span>ducphucuuu@gmail.com</span>
           </div>
-
+          <Link className="style_link" to={"https://web.facebook.com/Phucccxo/"}>
+          <div className="link-fb">
+            <FontAwesomeIcon icon={faSquareFacebook} />
+            <span>Đức Phúc</span>
+          </div>
+          </Link>
           <div className="contact-phone">
             <FontAwesomeIcon icon={faPhone} />
-            <span>0971259398</span>
+            <span>0398194278</span>
           </div>
         </div>
       </div>

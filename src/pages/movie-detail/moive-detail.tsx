@@ -5,6 +5,7 @@ import ReactPlayer from "react-player";
 import InfoDetailMovie from "../../components/InfoDetailMovie/InfoDetailMovie";
 import video from "../../assets/110715CineHarry746.webp";
 import CardMovieHeader from "../../components/CardMovieHeader/CardMovieHeader";
+import { useParams } from 'react-router-dom';
 
 import "./movie-detail.scss";
 const data: any = [];
@@ -22,28 +23,12 @@ const MovieDetail: React.FC<any> = () => {
   const handleClickCardMovie = () => {
     scrollToBottom();
   };
+  let { id } = useParams();
   return (
     <div ref={topRef} className="movie-detail-page-wrapper">
       <div className="movie-detail-content">
         <CardMovieHeader />
         <InfoDetailMovie />
-        <div className="list-movie">
-          <Divider style={{ paddingBottom: "2rem" }}>Phim liên quan</Divider>
-          <div>
-            <Row gutter={[10, 20]}>
-              {data.map((item: any) => {
-                return (
-                  <Col key={item} lg={4} xs={6}>
-                    <CardMovie click={handleClickCardMovie} />
-                  </Col>
-                );
-              })}
-            </Row>
-          </div>
-          <div className="pagination">
-            <Pagination showSizeChanger={false} total={500} defaultCurrent={3} />
-          </div>
-        </div>
       </div>
     </div>
   );

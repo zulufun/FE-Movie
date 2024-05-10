@@ -9,7 +9,6 @@ import MovieDetail from "./pages/movie-detail/moive-detail";
 import ListMoive from "./pages/list-moive/list-moive";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
-import NavbarInMobile from "./components/NavbarInMobile/NavbarInMobile";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./routes/index";
 
