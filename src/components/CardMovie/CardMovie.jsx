@@ -7,7 +7,7 @@ import "./CardeMovie.scss";
 import { RouterLinks } from "../../const/RouterLinks";
 
 const CardMovie = (props) => {
-  const { id, click, url, name } = props;
+  const { id, click, url, name, img } = props;
   const navigate = useNavigate();
   const handleClickCardMovie = () => {
     navigate(`/detail-moive/${id}`);
@@ -20,7 +20,7 @@ const CardMovie = (props) => {
         <img
           alt=""
           width={"100%"}
-          src={image}
+          src={img}
           //  preview={false}
           style={{ borderRadius: "0.5rem" }}
         ></img>

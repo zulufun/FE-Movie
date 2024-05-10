@@ -14,7 +14,7 @@ const ListMovieHome: React.FC = () => {
         <div className="list-movie-page">
           {listmovie.map((movie) => {
             return (
-              <CardMovie id={movie.id} name ={movie.name} click={() => console.log(movie.id)} />
+              <CardMovie id={movie.id} img ={movie.img} name ={movie.name} click={() => console.log(movie.id)} />
             )
           })}
         </div>
