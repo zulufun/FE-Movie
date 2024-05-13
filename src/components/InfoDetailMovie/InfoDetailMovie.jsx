@@ -8,8 +8,8 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./InfoDetailMovie.scss";
 import ReactPlayer from "react-player";
-
-const actors: any = [];
+import { useSearchParams } from "react-router-dom";
+const actors = [];
 for (let i = 0; i <= 10; i++) {
   actors.push(i);
 }
@@ -30,16 +30,20 @@ const responsive = {
     slidesToSlide: 1, // optional, default to 1.
   },
 };
-const InfoDetailMovie: React.FC<any> = () => {
+const InfoDetailMovie = (props) => {
+  let [searchParams, setSearchParams] = useSearchParams();
+  const nameMovive = searchParams.get("name")
+  const imgMovie = searchParams.get("img")
+  // const { id, click, url, name, img } = props;
   return (
     <div className="info-detail-movie">
       <div className="detail-movie">
         <div className="poster-detail-movie">
-          <Image src={image} preview={false} width={"100%"}></Image>
+          <Image src={imgMovie} preview={false} width={"100%"}></Image>
         </div>
 
         <div className="infomation">
-          <div className="title">Harry Potter</div>
+          <div className="title">{nameMovive}</div>
           <div className="base-info">jul 3,2023 103p Việt Nam</div>
           <div className="rate">
             <div className="count-star">9</div>
@@ -98,7 +102,7 @@ const InfoDetailMovie: React.FC<any> = () => {
         <div className="avatar">
           <Avatar src={avatar} size={"large"} />
           <div className="info-director">
-            <div className="name-director">Hoang Nam</div>
+            <div className="name-director">Chưa có</div>
             <div className="age-director">Age: 20</div>
           </div>
         </div>
@@ -114,12 +118,12 @@ const InfoDetailMovie: React.FC<any> = () => {
             responsive={responsive}
             // removeArrowOnDeviceType={["tablet", "mobile"]}
           >
-            {actors.map((item: any) => {
+            {actors.map((item) => {
               return (
                 <div key={item} className="avatar">
                   <Avatar src={avatar} size={"large"} />
                   <div className="info-actor">
-                    <div className="name-actor">Hoang Nam</div>
+                    <div className="name-actor">Loading</div>
                     <div className="age-actor">Age: 20</div>
                   </div>
                 </div>
@@ -132,11 +136,11 @@ const InfoDetailMovie: React.FC<any> = () => {
         <div className="title">Tập phim</div>
         <div className="list-episodess">
           <Carousel swipeable={false} draggable={false} ssr={true} infinite={true} responsive={responsive}>
-            {actors.map((item: any) => {
+            {actors.map((item) => {
               return (
                 <div key={item} className="item-episodes">
                   <ReactPlayer url={image} width={"100%"} height={"100%"} controls={true} />
-                  <div className="episode-count">Tập 2</div>
+                  <div className="episode-count">Tập .....</div>
                 </div>
               );
             })}

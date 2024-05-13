@@ -10,7 +10,7 @@ const CardMovie = (props) => {
   const { id, click, url, name, img } = props;
   const navigate = useNavigate();
   const handleClickCardMovie = () => {
-    navigate(`/detail-moive/${id}`);
+    navigate(`/detail-moive/${id}?name=${name}&img=${img}`);
   };
 
   return (

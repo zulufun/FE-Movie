@@ -28,7 +28,7 @@ const MovieDetail: React.FC<any> = () => {
     <div ref={topRef} className="movie-detail-page-wrapper">
       <div className="movie-detail-content">
         <CardMovieHeader />
-        <InfoDetailMovie />
+        <InfoDetailMovie  id ={id}/>
       </div>
     </div>
   );

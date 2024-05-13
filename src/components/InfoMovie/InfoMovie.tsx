@@ -6,7 +6,11 @@ import { useNavigate } from "react-router-dom";
 import "./InfoMovie.scss";
 import { RouterLinks } from "../../const/RouterLinks";
 import { useParams } from 'react-router-dom';
+import { useSearchParams } from "react-router-dom";
 const InfoMovie: React.FC<any> = () => {
+  let [searchParams, setSearchParams] = useSearchParams();
+  const nameMovive = searchParams.get("name")
+  const imgMovie = searchParams.get("img")
   const navigate = useNavigate();
   const {id} = useParams();
   const handleClickWatchMovie = () => {
@@ -15,7 +19,7 @@ const InfoMovie: React.FC<any> = () => {
   return (
     <div className="info-movie">
       <span className="series_movie">Phim bộ</span>
-      <h1 className="name_movie">Harry Potter</h1>
+      <h1 className="name_movie">{nameMovive}</h1>
       <div>
         <span className="info_detail_movie">9 tập - 2019 - Pháp thuật - Viễn tưởng</span>
       </div>
