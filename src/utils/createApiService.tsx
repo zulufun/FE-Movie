@@ -6,17 +6,17 @@ import Auth from "./auth";
 function getAuthToken() {
   return window.localStorage.getItem("token") ?? "";
 }
-
-var { server } = serverConfig;
-const _makeRequest = (instantAxios: any) => async (args: any) => {
-  const _headers = args.headers ? args.headers : {};
-  const body = args.body ? args.body : {};
-  const defaultHeaders = {};
-  args = {
-    ...args,
-    headers: {
-      ...defaultHeaders,
-      ..._headers,
+ 
+var { server } = serverConfig; 
+const _makeRequest = (instantAxios: any) => async (args: any) => { 
+  const _headers = args.headers ? args.headers : {}; 
+  const body = args.body ? args.body : {}; 
+  const defaultHeaders = {}; 
+  args = { 
+    ...args, 
+    headers: { 
+      ...defaultHeaders, 
+      ..._headers, 
     },
     body,
   };

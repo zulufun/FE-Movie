@@ -1,13 +1,13 @@
-import { serverConfig } from "../../const";
-import axios from "axios"
-export default class Auth {
-    static saveToken(token){
-        window.localStorage.setItem('token', token);
+import { serverConfig } from "../const"; 
+import axios from "axios"  
+export default class Auth { 
+    static saveToken(token){ 
+        window.localStorage.setItem('token', token);  
     }
-
-    static removeToken() {
-        window.localStorage.removeItem('token');
-    }
+ 
+    static removeToken() { 
+        window.localStorage.removeItem('token'); 
+    } 
 
     static async refreshToken(accessToken,refreshToken){
         try {
@@ -18,9 +18,9 @@ export default class Auth {
                   refreshToken: refreshToken,
                 }
               );
-            const newToken = refreshRes?.data?.AccessToken;
-            if(!newToken) {
-                return false;
+            const newToken = refreshRes?.data?.AccessToken; 
+            if(!newToken) { 
+                return false; 
             }
             this.saveToken(newToken);
             return true;
