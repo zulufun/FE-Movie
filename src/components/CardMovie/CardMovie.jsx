@@ -7,10 +7,10 @@ import "./CardeMovie.scss";
 import { RouterLinks } from "../../const/RouterLinks";
 
 const CardMovie = (props) => {
-  const { id, click, url, name, img } = props;
+  const { id, click, url, name, img , director, poster} = props;
   const navigate = useNavigate();
   const handleClickCardMovie = () => {
-    navigate(`/detail-moive/${id}?name=${name}&img=${img}`);
+    navigate(`/detail-moive/${id}?name=${name}&img=${img}&url=${url}&poster=${poster}`);
   };
 
   return (

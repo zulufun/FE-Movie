@@ -6,6 +6,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./ListMovieHome.scss";
 import listmovie from "../../const/movie";
 import { postServices } from "../../utils/services/postService";
+
 const ListMovieHome: React.FC = () => {
   const [movies, setMovies] = useState<any[]>([]); // Sử dụng any[] cho kiểu của movies
 
@@ -33,6 +34,8 @@ const ListMovieHome: React.FC = () => {
               id={movie.id}
               img={movie.img}
               name={movie.name}
+              url={movie.url}
+              poster ={movie.poster}
               click={() => console.log(movie.id)}
             />
           ))}

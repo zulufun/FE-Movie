@@ -7,11 +7,12 @@ import video from "../../assets/110715CineHarry746.webp";
 import "./watch-movie.scss";
 import { useParams } from 'react-router-dom';
 import listmovie from "../../const/movie";
-
+import { useSearchParams } from "react-router-dom";
 const WatchMovie = () => {
+  let [searchParams, setSearchParams] = useSearchParams();
   const { id } = useParams();
-  
-  const movieurl = listmovie.find(movie => movie.id === id).url; 
+  // const movieurl = listmovie.find(movie => movie.id === id).url; 
+  const movieurl = searchParams.get("url")
   console.log(movieurl)
   return (
     <div className="watch-movie-page-wrapper">

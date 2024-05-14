@@ -11,10 +11,13 @@ const InfoMovie: React.FC<any> = () => {
   let [searchParams, setSearchParams] = useSearchParams();
   const nameMovive = searchParams.get("name")
   const imgMovie = searchParams.get("img")
+  const poster = searchParams.get("poster")
+  const url = searchParams.get("url")
   const navigate = useNavigate();
   const {id} = useParams();
+  console.log(url)
   const handleClickWatchMovie = () => {
-    navigate(`/watch-movie/${id}`);
+    navigate(`/watch-movie/${id}?url=${url}`);
   };
   return (
     <div className="info-movie">

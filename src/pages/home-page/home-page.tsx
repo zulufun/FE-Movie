@@ -39,7 +39,6 @@ const HomePage: React.FC<any> = () => {
             <div className="movie-header">
               <Carousel dotPosition="bottom" dots={true} autoplay>
                 <CardMovieHeader />
-                
               </Carousel>
             </div>
           </Col>

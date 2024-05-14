@@ -34,6 +34,7 @@ const InfoDetailMovie = (props) => {
   let [searchParams, setSearchParams] = useSearchParams();
   const nameMovive = searchParams.get("name")
   const imgMovie = searchParams.get("img")
+  // props.nameMovive =nameMovive
   // const { id, click, url, name, img } = props;
   return (
     <div className="info-detail-movie">
