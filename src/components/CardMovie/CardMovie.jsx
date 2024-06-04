@@ -19,7 +19,8 @@ const CardMovie = (props) => {
         <FontAwesomeIcon className="icon-image-play" icon={faPlay} />
         <img
           alt=""
-          width={"100%"}
+          height={"250px"}
+          width={"150px"}
           src={img}
           //  preview={false}
           style={{ borderRadius: "0.5rem" }}
@@ -28,10 +29,10 @@ const CardMovie = (props) => {
       <div className="info-movie-card">
         <div className="row-1">
           <div>{name}</div>
-          <div className="year">2023</div>
+          <div className="year">2024</div>
         </div>
         <div className="row-2">
-          <div className="quality-movie">HD</div>
+          <div className="quality-movie">8K Supper HD</div>
           <div className="other-info-movie">
             <div className="run-time-card-movie">
               <FontAwesomeIcon
@@ -42,7 +43,7 @@ const CardMovie = (props) => {
                 }}
                 icon={faClock}
               />
-              120m
+              1 tỷ view 
             </div>
             <div className="rate-card-movie">
               <FontAwesomeIcon

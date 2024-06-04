@@ -42,7 +42,7 @@ const InfoDetailMovie = (props) => {
         <div className="poster-detail-movie">
           <Image src={imgMovie} preview={false} width={"100%"}></Image>
         </div>
-
+    
         <div className="infomation">
           <div className="title">{nameMovive}</div>
           <div className="base-info">jul 3,2023 103p Việt Nam</div>

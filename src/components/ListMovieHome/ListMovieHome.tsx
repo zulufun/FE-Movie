@@ -21,25 +21,34 @@ const ListMovieHome: React.FC = () => {
         console.error("Error fetching movies:", error);
       });
   }, []);
-
+  // Chia mảng movies thành các nhóm chứa 4 phần tử mỗi nhóm
+  const groupedMovies = [];
+  for (let i = 0; i < movies.length; i += 4) {
+    groupedMovies.push(movies.slice(i, i + 4));
+  }
   console.log(movies);
   return (
     <div className="list-movie-home">
       <div className="title-list">Top 10 bộ phim xu hướng</div>
       <div className="content-list">
-        <div className="list-movie-page">
-          {movies.map((movie: any) => ( // Thêm kiểu dữ liệu any cho movie
-            <CardMovie
-              key={movie.id} // Thêm key để React không cảnh báo
-              id={movie.id}
-              img={movie.img}
-              name={movie.name}
-              url={movie.url}
-              poster ={movie.poster}
-              click={() => console.log(movie.id)}
-            />
+        <Carousel showThumbs={false} showArrows={true} swipeScrollTolerance={4} showStatus ={true}>
+          {/* Hiển thị mỗi nhóm trong một slide của Carousel */}
+          {groupedMovies.map((group, index) => (
+            <div key={index} className="list-movie-page">
+              {group.map((movie: any) => (
+                <CardMovie
+                  key={movie.id}
+                  id={movie.id}
+                  img={movie.img}
+                  name={movie.name}
+                  url={movie.url}
+                  poster={movie.poster}
+                  click={() => console.log(movie.id)}
+                />
+              ))}
+            </div>
           ))}
-        </div>
+        </Carousel>
       </div>
     </div>
   );

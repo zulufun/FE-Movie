@@ -32,15 +32,12 @@ const ListMoive: React.FC<any> = () => {
         <Row gutter={[10, 10]}>
           <Col span={24}>
             <div className="movie-header">
-              <Carousel dotPosition="bottom" dots={true} autoplay >
+              <Carousel dotPosition="bottom" dots={true} autoplay  >
               {movies.map((movie: any) => ( // Thêm kiểu dữ liệu any cho movie
             <CardMovieHeader
-              poster ={movie.poster}  
+              poster ={movie.poster} 
               />
             ))}
-                <CardMovieHeader />
-                <CardMovieHeader />
-                <CardMovieHeader />
               </Carousel>
             </div>
           </Col>
